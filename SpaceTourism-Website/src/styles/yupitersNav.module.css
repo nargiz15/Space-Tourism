@@ -1,0 +1,30 @@
+
+.YupitersNav a{
+  text-decoration: none;
+  color: #D0D6F9;
+  margin-right: 65px;
+  font-size: 16px;
+  letter-spacing: 2.7px;
+}
+
+/* Tablets */
+@media (max-width: 768px){
+.YupitersNav{
+  width: 285.5px;
+  display: flex;
+  align-items: center;
+  padding-top: 30px;
+ }
+ .YupitersNav a{
+  margin-right: 35px;
+ }
+}
+
+/* Mobiles */
+
+@media only screen and (max-width: 600px){
+  .YupitersNav a{
+    font-size: 14px;
+  }
+  
+}
