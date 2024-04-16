@@ -30,9 +30,8 @@ function App() {
 
         <Route path="crew"
         >
-      
-       
        <Route path="" element={<Crew><Commander /></Crew>} /> 
+       <Route path="commander" element={<Crew><Commander/></Crew>} />
        <Route path="missionSpecialist" element={<Crew><MissionSpecialist /></Crew>} />
        <Route path="pilot" element={<Crew><Pilot /></Crew>} />
        <Route path="flightEngineer" element={<Crew><FlightEngineer /></Crew>} />

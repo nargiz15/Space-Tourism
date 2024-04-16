@@ -1,39 +1,53 @@
-import styles from './../styles/header.module.css'
-import { Link, NavLink } from 'react-router-dom'
-import circle from "./../assets/images/Group 2.svg"
-
+import  { useState } from 'react';
+import { Link, NavLink } from 'react-router-dom';
+import circle from './../assets/images/Group 2.svg';
+import styles from './../styles/header.module.css';
 
 const Header = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-   const navlinkStyle=({isActive})=>{
-       return {
-        fontWeight: isActive ? "bold" : "normal"
-       }
-   }
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
+
+  const navlinkStyle = ({ isActive }) => {
+    return {
+      fontWeight: isActive ? 'bold' : 'normal',
+    };
+  };
+
   return (
-    <>
-      
-      <header className={styles.header}>
-        <div className={styles.leftSide}>
-            <Link to="/">
-            <img src={circle} alt="icon"  className={styles.circleIcon}/>
-            </Link>
-          
-          <div className={styles.line}> <hr /></div>
+    <header className={styles.header}>
+      <div className={styles.leftSide}>
+        <Link to="/">
+          <img src={circle} alt="icon" className={styles.circleIcon} />
+        </Link>
+        <div className={styles.line}>
+          <hr />
         </div>
-
-        <nav className={styles.navbar}>
-        <NavLink style={navlinkStyle} to="/"> <span>00</span>  HOME</NavLink>
-        <NavLink   style={navlinkStyle} to="/destination">  <span>01</span> DESTINATION</NavLink>
-        <NavLink  style={navlinkStyle} to="/crew"> <span>02</span> CREW</NavLink>
-        {/* <NavLink   style={navlinkStyle}to="/technology"> <span>03</span>  TECHNOLOGY</NavLink> */}
-        
-        </nav>
-      </header>
-   
+      </div>
+    
+      <button className={styles.mobileMenuButton} onClick={toggleMenu}>
+       Menu
+      </button>
       
-    </>
-  )
-}
+      <nav className={`${styles.navbar} ${isMenuOpen ? styles.open : ''}`}>
+        <NavLink style={navlinkStyle} to="/" onClick={closeMenu}>
+          <span>00</span> HOME
+        </NavLink>
+        <NavLink style={navlinkStyle} to="/destination" onClick={closeMenu}>
+          <span>01</span> DESTINATION
+        </NavLink>
+        <NavLink style={navlinkStyle} to="/crew" onClick={closeMenu}>
+          <span>02</span> CREW
+        </NavLink>
+      </nav>
+    </header>
+  );
+};
 
-export default Header
+export default Header;

@@ -45,7 +45,6 @@
   flex-direction: column;
   align-items: center;
   gap: 20px;
-
 }
 
 .bottomSideDestination {
@@ -92,116 +91,117 @@
   align-items: flex-start;
 }
 @keyframes circle {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(360deg);
-    }
+  from {
+    transform: rotate(0deg);
   }
-.destinationContext img{
-    animation-duration: 40s;
-    animation-iteration-count: infinite;
-    animation-name: circle;
-    animation-timing-function: linear;
-    height: 400px;
-    object-fit: cover;
-    width: 400px;
-
+  to {
+    transform: rotate(360deg);
+  }
 }
-@media (max-width: 768px){
-  .DestinationFullScreen{
+.destinationContext img {
+  animation-duration: 40s;
+  animation-iteration-count: infinite;
+  animation-name: circle;
+  animation-timing-function: linear;
+  height: 400px;
+  object-fit: cover;
+  width: 400px;
+}
+
+/* tablet  */
+@media (max-width: 768px) {
+  .DestinationFullScreen {
     width: 768px;
-        min-height: 100vh;
-        overflow: hidden;
-        background-repeat: no-repeat;
-        background-position:  30% 55%;
-        background-size: cover;
+    min-height: 100vh;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-position: 30% 55%;
+    background-size: cover;
   }
-  .DestinationTitle{
-     text-align: left;
-     margin-left: 40px;
+  .DestinationTitle {
+    text-align: left;
+    margin-left: 40px;
   }
-  .destinationContext{
+  .destinationContext {
     flex-direction: column;
     margin-top: 50px;
-    
+
     align-items: center;
     text-align: center;
-
   }
-  .destinationContext img{
-      width: 300px;
-      height: 300px;
+  .destinationContext img {
+    width: 300px;
+    height: 300px;
   }
-  .moreText{
+  .moreText {
     align-items: center;
   }
-  .MoonTitle{
+  .MoonTitle {
     font-size: 80px;
   }
-  .MoonDescription{
-     width: 573px;
-     text-align: center;
-     font-size: 16px;
+  .MoonDescription {
+    width: 573px;
+    text-align: center;
+    font-size: 16px;
   }
   .destinationText hr {
-     width: 573px;
+    width: 573px;
   }
 }
 
-@media only screen and (max-width: 600px){
-  .DestinationFullScreen{
-    width: 375px;
-   height: auto;
-   overflow: hidden;
-   background-repeat: no-repeat;
-   background-size: cover;
-}
-.DestinationTitle{
-  align-items: center;
-  margin-left: 60px;
-  letter-spacing: 2.7px;
-  
-}
-.number{
-font-size: 16px;
-}
-.titledst{
-  font-size: 16px;
-}
+/* mobile */
 
-.destinationContext img{
-   width: 170px;
-   height: 170px;
-}
-.moreText{
-  align-items: center;
-  overflow-y: scroll; 
-}
-.MoonTitle{
-  font-size: 56px;
-}
-.MoonDescription{
-  width: 327px;
-  font-size: 15px;
-  line-height: 25px;
-}
-.bottomSideDestination{
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
-  padding-bottom: 25px;
-  font-family:  Bellefair;;
-}
-.moreText{
-  overflow: hidden;
-}
-.moreText hr{
-  width: 327px;
-}
-.bottomRight, .bottomLeft span{
-  font-size: 14px;
-  
-}
+@media only screen and (max-width: 600px) {
+  .DestinationFullScreen {
+    width: 375px;
+    height: auto;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .DestinationTitle {
+    align-items: center;
+    margin-left: 60px;
+    letter-spacing: 2.7px;
+  }
+  .number {
+    font-size: 16px;
+  }
+  .titledst {
+    font-size: 16px;
+  }
+
+  .destinationContext img {
+    width: 170px;
+    height: 170px;
+  }
+  .moreText {
+    align-items: center;
+    overflow-y: scroll;
+  }
+  .MoonTitle {
+    font-size: 56px;
+  }
+  .MoonDescription {
+    width: 327px;
+    font-size: 15px;
+    line-height: 25px;
+  }
+  .bottomSideDestination {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding-bottom: 25px;
+    font-family: Bellefair;
+  }
+  .moreText {
+    overflow: hidden;
+  }
+  .moreText hr {
+    width: 327px;
+  }
+  .bottomRight,
+  .bottomLeft span {
+    font-size: 14px;
+  }
 }

@@ -72,6 +72,8 @@
   bottom: 0;
   padding-bottom: 10px;
 }
+
+/* Tablet */
 @media (max-width: 768px) {
   .CrewFullScreen {
     width: 768px;
@@ -117,62 +119,61 @@
   }
 }
 
-@media only screen and (max-width: 600px){
-    .CrewFullScreen{
-        width: 375px;
-        height: auto;
-        overflow: hidden;
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
-    .CrewsNav{
-        top: 230px;
-        left: 20px;
-        right: 0;
-    }
-    .titleCrew{
-        font-size: 16px;
-        text-align: center;
-        letter-spacing: 2.7px;
-       
-        margin-left: 30px;
-        letter-spacing: 2.7px;
-    }
-    .crewContent{
-        flex-direction: column;
-        margin-top: 50px;
-        align-items: center;
-        text-align: center;
-        flex-direction: column-reverse;
-        gap: 30px;
-    }
-    .leftSideCrew{
-        align-items: center;
-        gap: 10px;
-        margin-top: 20px;
-    }
-    .MainTitle{
-        font-size: 16px;
-    }
-    .StaffName{
-        font-size: 24px;
-    }
-    .desc{
-        width: 327px;
-        font-size: 15px;
-        line-height: 25px;
-        text-align: justify;
-        height: 125px;
-    }
-    .rightSideCrew{
-        width: 327px;
-        height: 223px;
-        border-bottom: 1px solid gray;
-    }
-    .rightSideCrew img{
-        width: 153.92px;
-        height: 222px;
-       
-    }
-    
+/* Mobile */
+@media only screen and (max-width: 600px) {
+  .CrewFullScreen {
+    width: 375px;
+    height: auto;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .CrewsNav {
+    top: 230px;
+    left: 20px;
+    right: 0;
+  }
+  .titleCrew {
+    font-size: 16px;
+    text-align: center;
+    letter-spacing: 2.7px;
+
+    margin-left: 30px;
+    letter-spacing: 2.7px;
+  }
+  .crewContent {
+    flex-direction: column;
+    margin-top: 50px;
+    align-items: center;
+    text-align: center;
+    flex-direction: column-reverse;
+    gap: 30px;
+  }
+  .leftSideCrew {
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  .MainTitle {
+    font-size: 16px;
+  }
+  .StaffName {
+    font-size: 24px;
+  }
+  .desc {
+    width: 327px;
+    font-size: 15px;
+    line-height: 25px;
+    text-align: justify;
+    height: 125px;
+  }
+  .rightSideCrew {
+    width: 327px;
+    height: 223px;
+    border-bottom: 1px solid gray;
+  }
+  .rightSideCrew img {
+    width: 153.92px;
+    height: 222px;
+  }
 }
