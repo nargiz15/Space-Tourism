@@ -11,10 +11,10 @@
   justify-content: space-between;
   margin: 105px;
 
-  /* margin: 0 auto; */
+  
 }
 .container {
-  /* max-width: 1400px; */
+ 
   width: 100%;
   margin: 0 auto;
 }
@@ -46,72 +46,82 @@
   margin-right: 20px;
 }
 
-
-/* 
-Tablets */
-
-@media (max-width: 768px) {
-  .homeScreen {
-    width: 768px;
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+  .homeScreen{
+    max-width: 100vh;
     min-height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
     overflow: hidden;
-    background-repeat: no-repeat;
-    background-position: 30% 55%;
-    background-size: cover;
   }
-  .homeTexts {
+  .container{
+    width: 50%;
+  }
+  .homeTexts{
     flex-direction: column;
     align-items: center;
   }
-  .leftSideText {
-    text-align: center;
-  }
-  .description {
-    font-size: 16px;
-  }
-  .rightSide img {
-    width: 242px;
-    padding-bottom: 15px;
-  }
-}
-
-/* Mobiles */
-
-@media only screen and (max-width: 600px){
-    .homeScreen {
-     width: 375px;
-    height: 100vh;
-    /* overflow: hidden; */
-    background-repeat: no-repeat;
-    background-position: 1% ;
-    background-size: cover;
-}
-.homeTexts{
-    flex-direction: column;
-    align-items: center;
-    margin: 0 auto;
-}
-.leftSideText{
+  .leftSideText{
     align-items: center;
     margin-top: 40px;
+  }
+  .description{
+    text-align: center;
+  }
+  
+  .rightSide img{
+    width: 95%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .homeScreen{
+  max-width: 100vh;
+  min-height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 0px 50%;
+  overflow:hidden;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  }
+ 
+  .homeTexts{
+    flex-direction: column;
+  }
+  .leftSideText{
+    align-items: center;
     gap: 10px;
-}
-.Title{
+  }
+  .container{
+    width: 95%;
+  }
+  .Title{
     font-size: 16px;
-}
-.mainText{
+   text-align: center;
+  }
+  .mainText{
     font-size: 80px;
-}
-.description{
-    font-size: 15px;
-    width: 327px;
+    margin-top: 15px;
+  }
+  .description{
+   padding: 0 50px;
+    font-size: 16px;
+    text-align: center;
     line-height: 25px;
-}
-.rightSide{
-   margin-top: -50px;
-}
-.rightSide img{
-    width: 150px;
-    height: 150px;
-}
+  }
+  .rightSide{
+    text-align: center;
+    width: 100%;
+    margin-top: -40px;
+  }
+  .rightSide img{
+    width: 95%;
+   
+    padding-bottom: 30px;
+    padding-left: 25px;
+    padding-right: 25px;
+  }
 }

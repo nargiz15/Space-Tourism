@@ -8,6 +8,7 @@ const Crew = ({children}) => {
   return (
     <div className={styles.CrewFullScreen}>
       <Header />
+      
       <div className={styles.container}>
          <p className={styles.titleCrew}><span>02</span> MEET YOUR CREW</p>
       </div>

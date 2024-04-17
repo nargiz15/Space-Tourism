@@ -72,108 +72,131 @@
   bottom: 0;
   padding-bottom: 10px;
 }
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
 
-/* Tablet */
-@media (max-width: 768px) {
-  .CrewFullScreen {
-    width: 768px;
+  .CrewFullScreen{
+    max-width: 100vh;
     min-height: 100vh;
-    overflow: hidden;
-    background-repeat: no-repeat;
     background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    overflow-x: scroll;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
   }
-  .titleCrew {
-    text-align: left;
-    margin-left: 40px;
+  .container{
+    width: 80%;
   }
-  .crewContent {
+  .CrewContainer{
+    width: 50%;
+    position: relative;
+    
+  }
+  .crewContent{
     flex-direction: column;
-    margin-top: 50px;
+    flex-direction: column-reverse;
+    margin-top: 70px;
+    position: relative;
+  }
+  .leftSideCrew{
     align-items: center;
-    text-align: center;
+    margin-top: 40px;
   }
-  .leftSideCrew {
-    align-items: center;
-  }
-  .MainTitle {
-    font-size: 24px;
-  }
-  .StaffName {
+  .StaffName{
     font-size: 40px;
   }
-  .desc {
-    width: 520px;
+  .desc{
     font-size: 16px;
+    text-align: center;
+    line-height: 28px;
   }
-  .CrewsNav {
-    top: 250px;
-    left: 340px;
-  }
-  .CrewsNav a {
-    margin-right: 15px;
-    font-size: 10px;
-  }
-  .rightSideCrew img {
-    width: 368.85px;
-    height: 532px;
-  }
+
+ .CrewsNav{
+  position: absolute;
+  top: 100%;
+  left: 40%;
+ 
+ }
+
 }
-
-/* Mobile */
 @media only screen and (max-width: 600px) {
-  .CrewFullScreen {
-    width: 375px;
-    height: auto;
-    overflow: hidden;
-    background-repeat: no-repeat;
-    background-size: cover;
+  .CrewFullScreen{
+  max-width: 100vh;
+  min-height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 0px 50%;
+  overflow-y: scroll;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
   }
-  .CrewsNav {
-    top: 230px;
-    left: 20px;
-    right: 0;
+  .container{
+    width: 80%;
+   
   }
-  .titleCrew {
+  .titleCrew{
     font-size: 16px;
-    text-align: center;
-    letter-spacing: 2.7px;
-
-    margin-left: 30px;
-    letter-spacing: 2.7px;
   }
-  .crewContent {
+  .CrewContainer{
+    width: 50%;
+  
+    
+  }
+  .crewContent{
     flex-direction: column;
-    margin-top: 50px;
-    align-items: center;
-    text-align: center;
     flex-direction: column-reverse;
-    gap: 30px;
+    
   }
-  .leftSideCrew {
+  .leftSideCrew{
+    flex-direction: column;
     align-items: center;
-    gap: 10px;
+    gap: 30px;
+    width: 100%;
     margin-top: 20px;
   }
-  .MainTitle {
+  .MainTitle{
     font-size: 16px;
+    margin-top: 10px;
+    text-align: center;
   }
-  .StaffName {
+  .StaffName{
     font-size: 24px;
+    text-align: center;
   }
-  .desc {
-    width: 327px;
+  .desc{
     font-size: 15px;
-    line-height: 25px;
-    text-align: justify;
-    height: 125px;
+    text-align: center;
+    padding: 0 40px;
+    text-align: center;
+    padding-bottom: 20px;
   }
-  .rightSideCrew {
-    width: 327px;
-    height: 223px;
+  .CrewsNav {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%); 
+    display: flex;
+    gap: 8px;
+    width: auto;
+    text-align: center;
+    z-index: 1;
+   
+  }
+  .CrewsNav a{
+    font-size: 8px;
+ 
+  }
+  .rightSideCrew{
+    text-align: center;
+    margin-top: 40px;
+    width: 100%;
+    height: auto;
     border-bottom: 1px solid gray;
   }
-  .rightSideCrew img {
-    width: 153.92px;
-    height: 222px;
+  .rightSideCrew img{
+    width: 90%;
+    height: auto;
   }
 }

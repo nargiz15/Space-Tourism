@@ -13,9 +13,9 @@ const Commander = () => {
     <div className={styles.CrewContainer}>
     <div data-aos="fade-left" className={styles.crewContent}>
       <div className={styles.leftSideCrew}>
-       <p className={styles.MainTitle}>MISSION SPECIALIST </p>
-       <p className={styles.StaffName}>MARK SHUTTLEWORTH</p>
-       <p className={styles.desc}>Mark Richard Shuttleworth is the founder and CEO of Canonical, the company behind the Linux-based Ubuntu operating system. Shuttleworth became the first South African to travel to space as a space tourist.</p>
+       <p className={styles.MainTitle}>COMMANDER </p>
+       <p className={styles.StaffName}>DOUGLAS HURLEY</p>
+       <p className={styles.desc}>Douglas Gerald Hurley is an American engineer, former Marine Corps pilot and former NASA astronaut. He launched into space for the third time as commander of Crew Dragon Demo-2.</p>
      
     
       </div>

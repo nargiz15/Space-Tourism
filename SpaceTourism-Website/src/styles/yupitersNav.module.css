@@ -7,24 +7,27 @@
   letter-spacing: 2.7px;
 }
 
-/* Tablets */
-@media (max-width: 768px){
-.YupitersNav{
- padding: 20px;
-  display: flex;
-  align-items: center;
-  
- }
- .YupitersNav a{
-  margin-right: 15px;
- }
-}
-
-/* Mobiles */
-
-@media only screen and (max-width: 600px){
-  .YupitersNav a{
-    font-size: 14px;
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+  .YupitersNav{
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
   }
-  
+  .YupitersNav a{
+    margin:18px;
+    letter-spacing: 2.7px;
+    font-size: 16px;
+  }
+}
+@media only screen and (max-width: 600px){
+  .YupitersNav{
+    margin-top: 50px;
+    text-align: center;
+  }
+  .YupitersNav a{
+   margin: 24px;
+   font-size: 14px;
+   letter-spacing: 2.36px;
+  }
+
 }

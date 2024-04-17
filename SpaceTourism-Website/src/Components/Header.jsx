@@ -1,7 +1,8 @@
-import  { useState } from 'react';
+import { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import circle from './../assets/images/Group 2.svg';
 import styles from './../styles/header.module.css';
+import Menu from "./../assets/images/menuNav.png"
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -30,11 +31,13 @@ const Header = () => {
           <hr />
         </div>
       </div>
-    
+
+     
       <button className={styles.mobileMenuButton} onClick={toggleMenu}>
-       Menu
+        <img src={Menu} alt="" />
       </button>
-      
+
+    
       <nav className={`${styles.navbar} ${isMenuOpen ? styles.open : ''}`}>
         <NavLink style={navlinkStyle} to="/" onClick={closeMenu}>
           <span>00</span> HOME

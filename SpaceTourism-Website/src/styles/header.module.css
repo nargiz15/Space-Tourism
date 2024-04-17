@@ -1,28 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 30px;
+
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 .navbar {
-  width: 830px;
-  height: 96px;
-
+  width: 100%;
   background-color: #0b0d17;
-  margin-top: 25px;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
   text-align: center;
   font-size: 18px;
+  height: 96px;
 }
+
 .navbar a {
   text-decoration: none;
   color: white;
   padding-right: 70px;
   letter-spacing: 2.7px;
 }
+
 .navbar span {
   font-weight: 700;
   padding-right: 5px;
@@ -33,86 +43,74 @@
   align-items: center;
   gap: 45px;
 }
+
 .circleIcon {
   padding-left: 40px;
   padding-top: 18px;
 }
+
 .line hr {
   width: 473px;
   margin-top: 10px;
-
   color: grey;
 }
+
 .mobileMenuButton {
   display: none;
 }
 
-@media (max-width: 768px) {
+/* tablets */
+
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
   .line {
     display: none;
   }
-
-  .navbar {
-    width: 830px;
-    height: 96px;
-  }
-
-  .navbar a {
-    font-size: 18px;
-    padding-right: 70px;
-  }
-
-  .navbar span {
-    display: inline-block;
-  }
-
-  .mobileMenuButton {
-    display: none;
+  .header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
   }
 }
+/* /mobiles */
 
-@media (max-width: 768px) {
-  .header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 16px;
-  }
-
+@media only screen and (max-width: 600px) {
   .navbar {
     display: none;
   }
-
-  .open {
-    background-color: red;
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-    min-height: 100%;
-    flex: 1;
-    position: fixed;
-    right: 0;
-    z-index: 9;
+  .header {
+    position: sticky;
     top: 0;
-    transition: all 0.5s ease;
-    backdrop-filter: blur(50px);
-    background-color: rgba(0, 0, 0, 0.5);
-    padding-top: 16px;
-  }
-
-  a {
-    color: white;
-    text-align: center;
-    padding: 10px;
+    z-index: 1000;
   }
 
   .mobileMenuButton {
     display: block;
-    cursor: pointer;
-    z-index: 1;
-    color: grey;
-    background-color: rgba(100, 99, 99, 0.199);
-    padding: 10px;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    padding: 15px 20px;
     border: none;
+    width: 80px;
+    background-color: #0b0d173e;
+  }
+  .navbar.open {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(78, 75, 75, 0.286);
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+    font-size: 16px;
+  }
+  .navbar.open span {
+    display: none;
+  }
+
+  .navbar.open a {
+    display: block;
+    margin-bottom: 10px;
+  }
+  .line {
+    display: none;
   }
 }

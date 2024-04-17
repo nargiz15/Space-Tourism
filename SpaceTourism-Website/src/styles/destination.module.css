@@ -76,6 +76,7 @@
 }
 .destinationText hr {
   width: 444px;
+  color: #383b4b26
 }
 .bottomRight,
 .bottomLeft {
@@ -108,100 +109,102 @@
   width: 400px;
 }
 
-/* tablet  */
-@media (max-width: 768px) {
-  .DestinationFullScreen {
-    width: 768px;
-    min-height: 100vh;
-    overflow: hidden;
-    background-repeat: no-repeat;
-    background-position: 30% 55%;
-    background-size: cover;
-  }
-  .DestinationTitle {
-    text-align: left;
-    margin-left: 40px;
-  }
-  .destinationContext {
-    flex-direction: column;
-    margin-top: 50px;
 
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+  .DestinationFullScreen{
+    max-width: 100vh;
+    min-height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    overflow-x: scroll;
+  }
+  .DestinationTitle{
+    width: 80%;
+  }
+  .container{
+    width: 50%;
+  }
+  .destinationContext{
+    flex-direction: column;
     align-items: center;
-    text-align: center;
+    margin-top: 40px;
   }
-  .destinationContext img {
-    width: 300px;
-    height: 300px;
-  }
-  .moreText {
+  .destinationText{
     align-items: center;
   }
-  .MoonTitle {
-    font-size: 80px;
+  .moreText{
+    align-items: center;
+   
   }
-  .MoonDescription {
-    width: 573px;
+  .MoonTitle{
+    margin-top: 30px;
+  }
+  .MoonDescription{
     text-align: center;
+    line-height: 28px;
     font-size: 16px;
+    margin-bottom: 10px;
   }
-  .destinationText hr {
-    width: 573px;
+  .bottomSideDestination{
+    margin-bottom: 20px;
+    
   }
 }
 
-/* mobile */
-
 @media only screen and (max-width: 600px) {
-  .DestinationFullScreen {
-    width: 375px;
-    height: auto;
-    overflow: hidden;
-    background-repeat: no-repeat;
+  .DestinationFullScreen{
+    max-width: 100vh;
+    min-height: 100vh;
     background-size: cover;
-  }
-  .DestinationTitle {
-    align-items: center;
-    margin-left: 60px;
-    letter-spacing: 2.7px;
-  }
-  .number {
-    font-size: 16px;
-  }
-  .titledst {
-    font-size: 16px;
-  }
-
-  .destinationContext img {
-    width: 170px;
-    height: 170px;
-  }
-  .moreText {
-    align-items: center;
+    background-repeat: no-repeat;
+    background-position: 0px 50%;
     overflow-y: scroll;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
   }
-  .MoonTitle {
+  .DestinationTitle{
+    width: 80%;
+  }
+  .DestinationTitle .number, .titledst{
+    font-size: 16px;
+  }
+  .container{
+    width: 100%;
+  }
+  .destinationContext{
+    flex-direction: column;
+  }
+  .destinationContext img{
+    width: 50%;
+    height: 50%;
+  }
+  .destinationText{
+    
+    align-items: center;
+  }
+  .moreText{
+    align-items: center;
+   
+  }
+  .MoonTitle{
     font-size: 56px;
   }
-  .MoonDescription {
-    width: 327px;
+  .MoonDescription{
+    text-align: center;
     font-size: 15px;
     line-height: 25px;
+    width: 70%;
   }
-  .bottomSideDestination {
+  .moreText hr{
+    width: 75%;
+    
+  }
+  .bottomSideDestination{
     flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    padding-bottom: 25px;
-    font-family: Bellefair;
+    margin-top: 30px;
+    margin-bottom: 30px;
   }
-  .moreText {
-    overflow: hidden;
-  }
-  .moreText hr {
-    width: 327px;
-  }
-  .bottomRight,
-  .bottomLeft span {
-    font-size: 14px;
-  }
+
 }
