@@ -3,7 +3,7 @@ import { Link, NavLink } from 'react-router-dom';
 import circle from './../assets/images/Group 2.svg';
 import styles from './../styles/header.module.css';
 import { RxHamburgerMenu } from "react-icons/rx";
-import { IoClose } from 'react-icons/io5'; // Import the close (X) icon
+import { IoClose } from 'react-icons/io5';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
