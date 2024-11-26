@@ -6,7 +6,7 @@
 
 .header {
   display: flex;
-  align-items: center;
+  /* align-items: center; */
   justify-content: space-between;
   gap: 30px;
 
@@ -40,7 +40,7 @@
 
 .leftSide {
   display: flex;
-  align-items: center;
+  /* align-items: center; */
   gap: 45px;
 }
 
@@ -58,6 +58,30 @@
 .mobileMenuButton {
   display: none;
 }
+
+
+
+.closeMenuButton {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: #fff; 
+}
+
+
+.navbar.open {
+  display: block;
+
+}
+
+.navbar {
+  display: none;
+
+}
+
 
 /* tablets */
 
@@ -88,19 +112,27 @@
     position: absolute;
     top: 15px;
     right: 20px;
-    padding: 15px 20px;
     border: none;
     width: 80px;
-    background-color: #0b0d173e;
+    background-color: #25252500;
+    display: block;
+    position: absolute;
+    padding: 10px;
+     color: white;
+    font-size: 40px;
+}
   }
   .navbar.open {
     display: flex;
     flex-direction: column;
-    background-color: rgba(78, 75, 75, 0.286);
-    align-items: center;
+    background-color: #000000;
+    /* align-items: center; */
     text-align: center;
     height: 100vh;
     font-size: 16px;
+    width: 70%;
+    position: absolute;
+    right: 0;
   }
   .navbar.open span {
     display: none;
@@ -113,4 +145,5 @@
   .line {
     display: none;
   }
-}
+
+

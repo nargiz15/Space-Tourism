@@ -2,7 +2,8 @@ import { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import circle from './../assets/images/Group 2.svg';
 import styles from './../styles/header.module.css';
-import Menu from "./../assets/images/menuNav.png"
+import { RxHamburgerMenu } from "react-icons/rx";
+import { IoClose } from 'react-icons/io5'; // Import the close (X) icon
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -32,13 +33,18 @@ const Header = () => {
         </div>
       </div>
 
-     
+      {/* Mobile menu button */}
       <button className={styles.mobileMenuButton} onClick={toggleMenu}>
-        <img src={Menu} alt="" />
+        <RxHamburgerMenu />
       </button>
 
-    
+      {/* Mobile sidebar menu */}
       <nav className={`${styles.navbar} ${isMenuOpen ? styles.open : ''}`}>
+        {/* Close button (X) */}
+        <button className={styles.closeMenuButton} onClick={closeMenu}>
+          <IoClose size={30} /> {/* X icon */}
+        </button>
+
         <NavLink style={navlinkStyle} to="/" onClick={closeMenu}>
           <span>00</span> HOME
         </NavLink>
